@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      html,
+      body {
+        height: 100%;
+        font-family: "Lato", sans-serif;
+        letter-spacing: 10pt;
+      }
+      body {
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        overflow: hidden;
+      }
+      .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-wrap: wrap;
+        width: 500px;
+      }
+      .heading-container {
+        width: 100%;
+      }
+      .name {
+        font-size: 28px;
+        font-weight: 400;
+        user-select: none;
+        cursor: pointer;
+      }
+      .icons-container {
+        margin: 20px auto;
+      }
+      .icon {
+        width: 30px;
+        margin: 10px;
+        transition: 0.5s all;
+        cursor: pointer;
+      }
+
+      .icon:hover {
+        transform: rotateZ(360deg);
+        filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="heading-container">
+        <h1 class="name"><span>BHAVISHYA SAHDEV</span></h1>
+      </div>
+      <div class="icons-container">
+        <img
+          class="icon"
+          id="dribbble"
+          src="./icons/dribbble.svg"
+          onClick="openPage('https://dribbble.com/bhavishya-s')"
+        />
+        <img
+          class="icon"
+          id="github"
+          src="./icons/github.svg"
+          onClick="openPage('https://github.com/bhavishya-s')"
+        />
+        <img
+          class="icon"
+          id="behance"
+          src="./icons/behance-network.svg"
+          onClick="openPage('https://www.behance.net/bhavishya19074')"
+        />
+        <img
+          class="icon"
+          id="twitter"
+          src="./icons/twitter.svg"
+          onClick="openPage('https://www.twitter.com/__bhavishya')"
+        />
+      </div>
+      <p class="description-container"></p>
+    </div>
+
+    <script>
+      const openPage = (url) => {
+        let win = window.open(url, "_blank");
+        win.focus();
+      };
+    </script>
+  </body>
+</html>
